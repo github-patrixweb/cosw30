@@ -50,6 +50,8 @@
         Patrick Olesiak
         August 31, 2019
         
+        
+        @@@@@@@@@@@@@@
         */
         #output a paragragh in HTML
         echo "<p>After my 1999 motorcycle accident, I did not ride for 16++ years.  However, in 2016 I decided to try an adult tricycle; that worked out for me due to recent balance issues.  Since that time, I assembled two of them.  And I often query Google about bike repair and maintenance questions.  One site that repeatedly came up with user threads on the subject is <a href='https://bikeforums.net' target='_blank'>Bike Forums</a>.  And for parts and accessories,I find <a href='https://www.amazon.com/s?k=cycling+accessories+for+bike&gclid=Cj0KCQjw2K3rBRDiARIsAOFSW_47iUiy1a4TvNUBSdYVsd_0-T19dpwpwuBK5Kl6iIJAPnTUmBPPZiUaAs-4EALw_wcB&hvadid=323347530889&hvdev=c&hvlocphy=9031542&hvnetw=g&hvpos=1t1&hvqmt=b&hvrand=5029445381829406785&hvtargid=kwd-505162740637&hydadcr=8590_9892164&tag=googhydr-20&ref=pd_sl_1270l2qu3v_b' target='_blank'>Amazon </a> is budget friendly.</p>
