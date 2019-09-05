@@ -22,12 +22,12 @@
             <br><br>
             <label>Confirm Password:</label>
             <input type="password" name="confirm_password" id="confirm_password" required>
-            <br><br>
+            <br><br> 
             <button>Register!</button>
             
             
         </form>
-    
+        <p>Fantasy WebSite <a href="login.php" title="Fantasy WebSite Login.">Login.</a></p>
     
     </body>
 </html>
