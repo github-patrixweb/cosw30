@@ -22,6 +22,9 @@
         echo '<a href="register.php">Go back</a>'; 
     }
 ?>
-       <p>Fantasy WebSite <a href="login.php" title="Fantasy WebSite login.">login</a>.</p>
+        <footer>
+            <p>&copy; 2019 <a href="index.php" title="Fantasy WebSite">Fantasy WebSite</a></p>
+        </footer>
+
       </body>
   </html>
