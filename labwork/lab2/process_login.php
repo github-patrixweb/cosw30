@@ -28,7 +28,7 @@
         //Successful - output and a success message
         echo '<h1>You logged in successfully!</h1>';
         echo "<p>Email Address: $email</p>";
-        echo "<p>Password: $password</p>";
+        echo "<p>Password: ***********123</p>";
     }
     
     else {
