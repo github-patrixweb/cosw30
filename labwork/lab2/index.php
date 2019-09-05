@@ -12,7 +12,6 @@
             <li><a href=register.php title="register">Register</a></li>
                 
         </ul>
-        <p>&copy; 2019<br>
-        Fantasy WebSite</p>
+        <p>&copy; 2019 Fantasy WebSite</p>
     </body>
 </html>
