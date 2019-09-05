@@ -41,6 +41,6 @@
     
     
 ?>        
-        <p>Fantasy WebSite &copy; 2019</p>
+        <p>&copy; 2019 <a href="index.php" title="Fantasy WebSite">Fantasy WebSite</a> </p>
     </body>
 </html>
