@@ -1,36 +1,27 @@
+<!doctype html>
+  <html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Process Register</title>
+          </head>
+   <body>
 <?php
-    //Capture the data from our form
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $confirm_password =$_POST['confirm_password'];
     
-    //Create variables to match email and password against 
-    $correct_email = 'test@test.com';
-    $correct_password = 'supersecure123';
-    
-    //Check if variables are empty
-           // if(!empty($_POST['email'])){
-            //   $email = $_POST['email'];
-            //}
-    
-    
-    
-    //Check if the data is good (isn't empty, matches our credentials)
-    
-    
-    if ($email == $correct_email && $password == $correct_password) {
-        //Successful - output and a success message
-        echo '<h1>You logged in successfully!</h1>';
-        echo "<p>Email Address: $email</p>";
-        echo "<p>Password: $password</p>";
+    if(!empty($first_name) && !empty($last_name) && !empty($email) && $password == $confirm_password){
+        echo "<h1>Welcome to fantacy website,  $first_name $last_name</h1>";
+        echo "<h2>Your email was recorded as: $email</h2>";
     }
-    
-    else {
+   else {
         //Error - output an error message
         echo '<h1>Sorry...try again!</h1>';
-        echo '<a href="login.php"Go back</a>';
+        echo '<a href="register.php">Go back</a>'; 
     }
-    
-    //Output a little message for fun
-    
-    
 ?>
+       <p>Fantasy WebSite <a href="login.php">login</a>.</p>
+      </body>
+  </html>
