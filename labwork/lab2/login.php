@@ -15,6 +15,6 @@
             <br><br>
             <button>Log In!</button>
         </form>
-        
+        <p>New members must <a href="register.php" title="new member registration form">register</a>.</p>
     </body>
 </html>
