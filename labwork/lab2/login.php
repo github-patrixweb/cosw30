@@ -15,6 +15,9 @@
             <br><br>
             <button>Log In!</button>
         </form>
-        
+        <p>New members must <a href="register.php" title="new member registration form">register</a>.</p>
+        <footer>
+            <p>&copy; 2019 <a href="index.php" title="Fantasy WebSite">Fantasy WebSite</a></p>
+        </footer>
     </body>
 </html>

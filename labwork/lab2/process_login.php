@@ -1,3 +1,10 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Process Login</title>
+    </head>
+    <body>
 <?php
     //Capture the data from our form
     $email = $_POST['email'];
@@ -21,7 +28,7 @@
         //Successful - output and a success message
         echo '<h1>You logged in successfully!</h1>';
         echo "<p>Email Address: $email</p>";
-        echo "<p>Password: $password</p>";
+        echo "<p>Password: ***********123</p>";
     }
     
     else {
@@ -33,4 +40,10 @@
     //Output a little message for fun
     
     
-?>
+?>        
+        <footer>
+            <p>&copy; 2019 <a href="index.php" title="Fantasy WebSite">Fantasy WebSite</a></p>
+        </footer>
+
+    </body>
+</html>

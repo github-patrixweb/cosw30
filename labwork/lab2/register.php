@@ -1,8 +1,8 @@
-<!doctype html>
+<<!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Login Form</title>
+        <title>Registration Form</title>
     </head>
     <body>
         <h1><b>Registration Form</b></h1>
@@ -22,12 +22,13 @@
             <br><br>
             <label>Confirm Password:</label>
             <input type="password" name="confirm_password" id="confirm_password" required>
-            <br><br>
+            <br><br> 
             <button>Register!</button>
             
             
         </form>
+        <p>Fantasy WebSite <a href="login.php" title="Fantasy WebSite Login.">Login.</a></p>
+        <p>&copy; 2019 <a href="index.php" title="Fantasy WebSite">Fantasy WebSite</a></p>
     
-    
-    
+    </body>
 </html>
