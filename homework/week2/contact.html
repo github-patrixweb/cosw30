@@ -1,12 +1,79 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <script>
+        function form-input(){
+           // document.forms["contact-Selina"]["first-name"].focus;
+           alert("Hello world");
+        }
+        function client-form-val(){
+//            if (gender.value == "null" ) {
+            x = document.forms["contact-Selina"]["gender"].value;
+//  if (x == "") {
+                alert("hello world") ;
+                alert(x);
+                
+  //          }
+    return true;
+        }
+        
+    </script>
 	<meta charset="utf-8">
 	<title>Contact Selina Meyer</title>
 </head>
-<body>
+<body onload="form-input()">
+    <header>
+        <h1>Contact Selina Meyer</h1>
+        <a href="https://en.wikipedia.org/wiki/Veep" target="_new"><img src="https://lbcc.instructure.com/courses/40413/files/1336648/preview" height=50 width=80></img></a>
+        <h2>Candidate in the U.S. 2020 Presidential Election</h2>
+    </header>
+    <section>
+        <form name="contact-Selina" action="process_contact.php"
+        onsubmit("return client-form-val()") method="post">
+            <p>
+                <label for"first-name">Fist Name:</label> 
+                <input type="text" id="first-name" required autofocus /></p>
+            <p><label for"last-name">Last Name:</label> 
+                <input type="text" id="last-name" required /></p>
+            <p><label for"email">E-mail:</label> 
+                <input type="email" id="email" required /></p>
+            	<p><label>Gender:
+	                <select id="gender">
+		                <option value="null">Please make a selection</option>
+		                <option value="m">Male</option>
+		                <option value="f">Female</option>
+		                <option value="p">Prefer Not to Say</option>
+                	</select></label></p>
+
+	        <p><label>Age:
+	            <select name="age">
+		            <option value="0-29">Under 30</option>
+		            <option value="30-60">Between 30 and 60</option>
+		            <option value="60+">Over 60</option>
+	            </select></label></p>
+	
+            <p><lable for="interests">Interests<br />
+                <input type="checkbox" id="interest1">NARAL Pro-Choice America<br />
+                <input type="checkbox" id="interest2">National Right to Life Committee<br />
+                <input type="checkbox" id="interest3">Planned Parenthood Action Fund<br />
+                <input type="checkbox" id="interest4">Democrats for Life of America<br />
+                <input type="checkbox" id="interest5">Emily's List<br />
+                <input type="checkbox" id="interest6">Family Policy Alliance
+            </lable></p>    
+            <p><label for="contribution">Contribution Amount
+                <input type="number" value=0 id="contribution">
+            </label></p>    
+            
+            <input type="submit" value="Submit"/>
+        </form>
+    </section>
     <footer>
         <a href="https://en.wikipedia.org/wiki/Veep">Wiki entry for Veep</a>
     </footer>
 </body>
 </html>
+Campaign for Working Families
+
+
+
+International Union of Bricklayers & Allied Craftworkers
