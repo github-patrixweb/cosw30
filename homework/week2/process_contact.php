@@ -70,7 +70,7 @@ COSW 30 week 2, homework 2
                 # assign number in array for check
                 $iCount = count($interest);
                 #print if interest selected
-                if (!empty($iCount)) {
+                if ($iCount == 1 || $iCount == 2 || $iCount == 3 || $iCount == 4 || $iCount == 5 || $iCount == 6) {
                     echo ("<h2>Interests</h2>");
                     echo ("<ul>");
                 }    
