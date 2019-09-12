@@ -1,3 +1,14 @@
+<?php
+/*
+
+Patrick Olesiak
+2019.9.9
+process_contact.php
+COSW 30 week 2, homework 2
+
+*/
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,6 +25,19 @@
     $email = $_POST['email'];
     $gender = $_POST['gender'];
     $age = $_POST['age'];
+    # put selected interests in an array - $interest[]
+    $interest = array(1 => "", "", "", "", "", "");
+    for ($i = 1; $i < 7; $i++){
+            $int = "interest" . $i;
+            
+            $iTemp = $_POST["$int"];
+            if (!empty($iTemp)) {
+                $interest[i] = $iTemp;
+                echo "$i is: $interest[i]";
+                
+            }
+    }  
+    # $interest[] = 
     $interest1 = $_POST['interest1'];
     $interest2 = $_POST['interest2'];
     $interest3 = $_POST['interest3'];
@@ -52,31 +76,31 @@
             <tr>
                 <td colspan="2">
                 <?php
-                if (isset($interest1) || isset($interest2) || isset($interest3) || isset($interest4) || isset($interest5) || isset($interest6)){
-                    echo ("<h2>Interests</h2>");    
+                # assign number in array for check
+                $iTemp = count($interest);
+                echo $iTemp;
+                #print if interest selected
+                if ($iTemp > 0) {
+                    echo ("<h2>Interests</h2>");
+                    echo ("<ul>");
+                    # loop printing of selected interest(s)
+                    for ($i = 1, $i < 7, $i++){
+                        echo "<li>$interest[$i] </li>";
+                    }
+                    
+                    echo ("</ul>");
                 }
-                echo ("<ul>");
-                # check incoming form checkboxes using isset; if value true/on, then print value; otherwise NOT
-                if (isset($interest1)){
-                    echo "<li>NARAL Pro-Choice America</li>";
-                }
-                if (isset($interest2)){
-                    echo "<li>National Right to Life Committee</li>";
-                }
-                if (isset($interest3)){
-                    echo "<li>Planned Parenthood Action Fund</li>";
-                }
-                if (isset($interest4)){
-                    echo "<li>Democrats for Life of America</li>";
-                }
-                if (isset($interest5)){
-                    echo "<li>Emily's List</li>";
-                }
-                if (isset($interest6)){
-                    echo "<li>Family Policy Alliance</li>";
-                }
-                echo ("</ul>");
-    }    
+                else {
+                    echo "No interests were selected";
+                }    
+                   
+                
+                    
+                
+                
+                
+                
+    }
     #the user bypassed client-side security and submitted bad info
     else {
         echo "<h2>Your form was missing valid information.</h2>";
