@@ -19,7 +19,7 @@ COSW 30 week 2, homework 2
 <body><h1>Contact Selina Meyer Form Results</h1>
 <img src="http://patricks-web.22web.org/cosw30/homework/week-2/images/Selina_Meyer_access-2019-9-8.jpg" height="201" title="Selina Meyer">
 <?php 
-    #get post array in local variables
+    #put post array in local variables
     $first_name = $_POST['first-name'];
     $last_name = $_POST['last-name'];
     $email = $_POST['email'];
@@ -35,13 +35,6 @@ COSW 30 week 2, homework 2
                 $interest[$i] = $iTemp;
             }
     }  
-    # $interest[] = 
-    $interest1 = $_POST['interest1'];
-    $interest2 = $_POST['interest2'];
-    $interest3 = $_POST['interest3'];
-    $interest4 = $_POST['interest4'];
-    $interest5 = $_POST['interest5'];
-    $interest6 = $_POST['interest6'];
     $contribution = $_POST['contribution'];
     $email_list = $_POST['email-list'];
     $message = $_POST['message'];
@@ -77,7 +70,7 @@ COSW 30 week 2, homework 2
                 # assign number in array for check
                 $iCount = count($interest);
                 #print if interest selected
-                if ($iCount > 0) {
+                if (!empty($iCount)) {
                     echo ("<h2>Interests</h2>");
                     echo ("<ul>");
                 }    
