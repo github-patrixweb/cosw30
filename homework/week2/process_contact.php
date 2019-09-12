@@ -32,8 +32,8 @@ COSW 30 week 2, homework 2
             
             $iTemp = $_POST["$int"];
             if (!empty($iTemp)) {
-                $interest[i] = $iTemp;
-                echo "$i is: $interest[i]";
+                $interest[$i] = $iTemp;
+                echo "$i is: $interest[$i]";
                 
             }
     }  
@@ -85,6 +85,7 @@ COSW 30 week 2, homework 2
                     echo ("<ul>");
                     # loop printing of selected interest(s)
                     for ($i = 1; $i < 7; $i++){ 
+                        
                         echo "<li>$interest[$i] </li>";
                     }
                     
