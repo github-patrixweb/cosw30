@@ -75,11 +75,12 @@ COSW 30 week 2, homework 2
                 <td colspan="2">
                 <?php
                 # assign number in array for check
-                $iTemp = count($interest);
+                $iCount = count($interest);
                 #print if interest selected
-                if ($iTemp != "0") {
+                if ($iCount > 0) {
                     echo ("<h2>Interests</h2>");
                     echo ("<ul>");
+                }    
                     # loop printing of selected interest(s)
                     for ($i = 1; $i < 7; $i++){ 
                         if (!empty($interest[$i]))
