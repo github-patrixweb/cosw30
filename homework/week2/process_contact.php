@@ -82,6 +82,7 @@ COSW 30 week 2, homework 2
                     echo ("<ul>");
                     # loop printing of selected interest(s)
                     for ($i = 1; $i < 7; $i++){ 
+                        if (!empty($interest[$i]))
                         echo "<li>$interest[$i] </li>";
                     }
                     
@@ -90,13 +91,7 @@ COSW 30 week 2, homework 2
                 else {
                     echo "No interests were selected";
                 }    
-                   
-                
-                    
-                
-                
-                
-                
+              
     }
     #the user bypassed client-side security and submitted bad info
     else {
