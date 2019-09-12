@@ -77,7 +77,7 @@ COSW 30 week 2, homework 2
                 # assign number in array for check
                 $iTemp = count($interest);
                 #print if interest selected
-                if ($iTemp > 0) {
+                if ($iTemp != "0") {
                     echo ("<h2>Interests</h2>");
                     echo ("<ul>");
                     # loop printing of selected interest(s)
