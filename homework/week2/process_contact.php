@@ -92,13 +92,7 @@ COSW 30 week 2, homework 2
                 else {
                     echo "No interests were selected";
                 }    
-              
-    }
-    #the user bypassed client-side security and submitted bad info
-    else {
-        echo "<h2>Your form was missing valid information.</h2>";
-        echo "<h3> Please <a href='contact.html' title='contact.html'>fill out the form</a> and resubmit.</h3>";
-    }
+    
                     ?>                
                                              
                 </td>
