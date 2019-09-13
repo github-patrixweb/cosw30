@@ -12,6 +12,31 @@ COSW 30 week 2, homework 2
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="
+http://patricks-web.22web.org/cosw30/homework/week-2/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://patricks-web.22web.org/cosw30/homework/week-2/images/favicon-16x16.png">
+    <link rel="manifest" href="
+http://patricks-web.22web.org/cosw30/homework/week-2/images/site.webmanifest">
+    <link rel="mask-icon" href="
+http://patricks-web.22web.org/cosw30/homework/week-2/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="76x76" href="
+http://patricks-web.22web.org/cosw30/homework/week-2/images/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+   <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0"> 
+
+    <link rel="icon" type="image/png" sizes="32x32" href="
+http://patricks-web.22web.org/cosw30/homework/week-2/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://patricks-web.22web.org/cosw30/homework/week-2/images/favicon-16x16.png">
+    <link rel="manifest" href="
+http://patricks-web.22web.org/cosw30/homework/week-2/images/site.webmanifest">
+    <link rel="mask-icon" href="
+http://patricks-web.22web.org/cosw30/homework/week-2/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="76x76" href="
+http://patricks-web.22web.org/cosw30/homework/week-2/images/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+   <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0"> 
 	<meta charset="utf-8">
 	<meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0"> 
 	<title>Contact Selina Meyer Form ResultsS</title>
@@ -33,79 +58,91 @@ COSW 30 week 2, homework 2
             $iTemp = $_POST["$int"];
             if (!empty($iTemp)) {
                 $interest[$i] = $iTemp;
-            }
-    }  
+            } # end if
+    }  # end for loop
     $contribution = $_POST['contribution'];
     $email_list = $_POST['email-list'];
     $message = $_POST['message'];
     
     if ( !empty($first_name) && !empty($last_name) && !empty($email) && !empty($gender) && !empty($age)){
-        ?>
-        <h2>Thank you for your message.</h2>
-        <h3>The information received is listed in the table below.</h3>
-        <table width="98%" border="1">
-            <tr>
-                <td>First Name:</td>
-                <td><?php echo $first_name; ?></td>
-            </tr>
-              <tr>
-                <td>Last Name:</td>
-                <td><?php echo $last_name; ?></td>
-            </tr>
-              <tr>
-                <td>Email:</td>
-                <td><?php echo $email; ?></td>
-            </tr>
-              <tr>
-                <td>Gender:</td>
-                <td><?php echo $gender ?></td>
-            </tr>
-             <tr>
-                <td>Age:</td>
-                <td><?php echo $age ?></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                <?php
-                # assign number in array for check
-                $iCount = count($interest);
+        echo "<h2>Thank you $first_name.  Your message has been sent to Selina.</h2>\n";
+        echo "<h3>The information sent to Selina is listed in the table below.</h3>\n";
+        echo "<table width='33%' border='1'>\n";
+            echo "<tr>\n";
+                echo "<td>First Name:</td>\n";
+                echo "<td> $first_name</td>\n";
+            echo "</tr>\n";
+              echo "<tr>\n";
+                echo "<td>Last Name:</td>\n";
+                echo "<td>$last_name </td>\n";
+            echo "</tr>\n";
+              echo "<tr>\n";
+                echo "<td>Email:</td>\n";
+                echo "<td> $email</td>\n";
+            echo "</tr>\n";
+              echo "<tr>\n";
+                echo "<td>Gender:</td>\n";
+                echo "<td> $gender</td>\n";
+            echo "</tr>\n";
+             echo "<tr>\n";
+                echo "<td>Age:</td>\n";
+                echo "<td> $age </td>\n";
+            echo "</tr>\n";
+            echo "<tr>\n";
+                echo "<td colspan='2'>\n";
+                
+                # check if array has data and add 1 for each non empty element
+                $iCount = 0;
+                for ($i = 1; $i < 7; $i++) 
+                    if (!empty($interest[$i]))
+                        $iCount += 1 ;
+                    
                 #print if interest selected
-                if ($iCount == 1 || $iCount == 2 || $iCount == 3 || $iCount == 4 || $iCount == 5 || $iCount == 6) {
-                    echo ("<h2>Interests</h2>");
-                    echo ("<ul>");
-                }    
+                if ($iCount > 0) {
+                    echo "<h2>Interests ($iCount)</h2>";
+                    echo "<ul>";
                     # loop printing of selected interest(s)
                     for ($i = 1; $i < 7; $i++){ 
                         if (!empty($interest[$i]))
-                        echo "<li>$interest[$i] </li>";
+                            echo "<li>$interest[$i] </li>";
                     }
                     
-                    echo ("</ul>");
+                    echo "</ul>";
                 }
-                else {
-                    echo "No interests were selected";
-                }    
-    
-                    ?>                
+                else 
+                    echo "No interests were selected\n";
+                                   
                                              
-                </td>
-            </tr>
-            <tr>
-                <td>Contribution:</td>
-                <td><?php echo "$" . number_format($contribution, 2, ".", ","); ?></td>
-            </tr>
-               <tr>
-                <td>Signed up for email list:</td>
-                <td><?php if (isset($email_list)){echo "Yes";} else {echo "No";} ?></td>
-            </tr>
-               <tr>
-                <td>Comments:</td>
-                <td><?php echo $message ?></td>
-            </tr>
+                echo "</td>\n";
+            echo "</tr>\n";
+            echo "<tr>\n";
+                echo "<td>Contribution:</td>\n";
+                echo "<td>$" . number_format($contribution, 2, ".", ",") . "</td>\n";
+            echo "</tr>\n";
+               echo "<tr>\n";
+                echo "<td>Signed up for email list:</td>\n";
+                echo "<td>";
+                if (isset($email_list)){
+                    echo "Yes";
+                } else {
+                    echo "No";
+                }
+            echo "</td>\n";
+            echo "</tr>\n";
+            echo "<tr>\n";
+            echo "<td>Comments:</td>\n";
+            echo "<td>$message</td>\n";
+            echo "</tr>\n";
             
-      </table><br />&nbsp;<br />&nbsp;<br />&nbsp;
-    <footer>
-        <a href="https://en.wikipedia.org/wiki/Veep">Wiki entry for Veep</a>
-    </footer>
-    </body>
-</html>
+    echo "</table><br />&nbsp;<br />&nbsp;<br />&nbsp;\n";
+    }
+    # the client bypassed security and submitted an invalid form
+    else {
+        echo "<h2>The form submtted did not include required information; please go back and fill out the form again\n";
+    }
+    echo "<footer>\n";
+        echo  "<a href='https://www.usa.gov/register-to-vote' title='Register to Vote' target='_blank'><img src='http://patricks-web.22web.org/cosw30/homework/week-2/images/reg2vote123.png' alt='Register to Vote'></a>\n        <a href='https://en.wikipedia.org/wiki/Veep'>Wiki entry for Veep</a>\n";
+
+    echo "</footer>\n";
+    echo "</body>\n";
+echo "</html>";
