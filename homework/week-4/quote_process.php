@@ -9,6 +9,7 @@
        <title>Quote Process</title>
     </head>
     <body>
+       <div id="quote-results">
         <?php
         /*
             Patrick Olesiak
@@ -54,17 +55,18 @@
             }
             echo "</ul>\n";
             $output = array_slice($o_quote, 3);
-            echo "<h2>Original quote with \"I Love You\" appended and first three words removwed (" . count($output) . ")</h2>\n";
+            echo "<h2>Original quote with \"I Love You\" appended and first three words removed (" . count($output) . ")</h2>\n";
             echo "<ul>\n";
             foreach ($output as $i){
                     echo "<li>" . $i . "</li>\n";
             }
             
-            
+           echo "</ul>\n";
+            echo '<h3>Input another <a href="quote.html" title="Input another quote">quote</a>.</h3>';
         }
         
         ?>
-        <h3>Input another <a href="quote.html" title="Input another quote">quote</a>.</h3>
-   
+           
+        </div>   
     </body>
 </html>      

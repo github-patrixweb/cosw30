@@ -1,0 +1,21 @@
+body {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;     
+    background-color: lightblue;
+}
+div {
+    width: 80%;
+    border: 1.25em;
+    padding: 1.5em;
+    background-color: #FFFFFF;
+    margin: 1em 10%;
+}
+.citystate {
+    float: left;
+    width: 38%;
+    border: 1.25em;
+    padding: 1.5em;
+    background-color: #FFFFFF;
+    margin: 1em 3%;
+    
+} 
