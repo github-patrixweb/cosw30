@@ -19,3 +19,9 @@ div {
     margin: 1em 3%;
     
 } 
+@media only screen and (max-width: 1200px) {
+  .citystate {
+    clear: both;
+    width: 100%;  
+  }
+}
