@@ -86,7 +86,7 @@ $city_state_pop = array("New York, New York" => "8,622,698", "Los Angeles, Calif
             
                     ?>         </tbody>
                             </table>
-            <a href="quote.html" title="Quote Page">Click here for the Quote Page.</a>
+            <p><a href="quote.html" title="Quote Page">Click here for the Quote Page.</a></p>
         </div>
     </body>
 </html>      
