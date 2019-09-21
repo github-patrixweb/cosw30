@@ -1,6 +1,7 @@
 body {
     width: 100%;
-    font-family: 'Montserrat', sans-serif;     
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 150%;
     background-color: lightblue;
 }
 div {
@@ -22,6 +23,6 @@ div {
 @media only screen and (max-width: 1200px) {
   .citystate {
     clear: both;
-    width: 100%;  
+    width: 88%;  
   }
 }

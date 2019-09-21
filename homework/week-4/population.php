@@ -7,8 +7,37 @@
         
 */
         
-$city_state_pop = array("New York, New York" => "8,622,698", "Los Angeles, California" => "3,999,759", "Chicago, Illinois" => "2,716,450", "Houston, Texas" => "2,312,717", "Phoenix, Arizona" => "1,626,078", "Philadelphia, Pennsylvania" => "1,580,863", "San Antonio, Texas" => "1,511,946", "San Diego, California" => "1,419,516", "Dallas, Texas" => "1,341,075", "San Jose, California" => "1,035,317", "Austin, Texas" => "950,715", "Jacksonville, Florida" => "892,062", "San Francisco, California" => "884,363", "Columbus, Ohio" => "879,170", "Fort Worth, Texas" => 
-"874,168",)
+$city_state_pop = array("New York, New York" => "8,622,698", 
+                        "Los Angeles, California" => "3,999,759", 
+                        "Chicago, Illinois" => "2,716,450", 
+                        "Houston, Texas" => "2,312,717", 
+                        "Phoenix, Arizona" => "1,626,078", 
+                        "Philadelphia, Pennsylvania" => "1,580,863", 
+                        "San Antonio, Texas" => "1,511,946", 
+                        "San Diego, California" => "1,419,516", 
+                        "Dallas, Texas" => "1,341,075", 
+                        "San Jose, California" => "1,035,317", 
+                        "Austin, Texas" => "950,715", 
+                        "Jacksonville, Florida" => "892,062", 
+                        "San Francisco, California" => "884,363", 
+                        "Columbus, Ohio" => "879,170", 
+                        "Fort Worth, Texas" => "874,168",);
+
+$city_state_rank = array("New York, New York" => "1", 
+                        "Los Angeles, California" => "2", 
+                        "Chicago, Illinois" => "3", 
+                        "Houston, Texas" => "4", 
+                        "Phoenix, Arizona" => "5", 
+                        "Philadelphia, Pennsylvania" => "6", 
+                        "San Antonio, Texas" => "7", 
+                        "San Diego, California" => "8", 
+                        "Dallas, Texas" => "9", 
+                        "San Jose, California" => "10", 
+                        "Austin, Texas" => "11", 
+                        "Jacksonville, Florida" => "12", 
+                        "San Francisco, California" => "13", 
+                        "Columbus, Ohio" => "14", 
+                        "Fort Worth, Texas" => "15",);
 
 
 ?>
@@ -22,8 +51,9 @@ $city_state_pop = array("New York, New York" => "8,622,698", "Los Angeles, Calif
         <meta name="viewport" content="class="citystate"width=device-width, initial-scale=1">
        <title>Most Populous Cities &#40;2017 populations&#41;</title>
     </head>
-    <body><a href="quote.html" title="Quote Page">Click here for the Quote Page.</a>
+    <body>
        <div class="citystate">
+           <p><a href="quote.html" title="Quote Page">Click here for the Quote Page.</a></p>
             <table border="1" cellspacing="1" cellpadding="3">
                 <tbody>
                 <tr>
@@ -56,20 +86,25 @@ $city_state_pop = array("New York, New York" => "8,622,698", "Los Angeles, Calif
             
                     ?>         </tbody>
            </table>
+           <p><a href="quote.html" title="Quote Page">Click here for the Quote Page.</a></p>
         </div>   
         <div class="citystate">
-                           <table border="1" cellspacing="1" cellpadding="3">
+                           <p><a href="quote.html" title="Quote Page">Click here for the Quote Page.</a></p>
+                            <table border="1" cellspacing="1" cellpadding="3">
                                <tbody>
                                     <tr>
-                                        <td colspan="2" valign="top">
+                                        <td colspan="3" valign="top">
                                         <p><strong>The 15 Most Populous Cities as of July 1, 2017<br />Sorted by City Name</strong></p>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td valign="top">
-                                        <p><strong>City, State</strong></p>
+                                        <p><strong>Rank</strong></p>
                                         </td>
                                         <td  valign="top">
+                                        <p><strong>City, State</strong></p>
+                                        </td>
+                                    <td  valign="top">
                                         <p><strong>2017 total population</strong></p>
                                         </td>
                                     </tr>
@@ -79,6 +114,7 @@ $city_state_pop = array("New York, New York" => "8,622,698", "Los Angeles, Calif
                 
                 ksort($city_state_pop);              
                 foreach ($city_state_pop as $k => $v){
+                    echo "<td>$city_state_rank[$k]</td>\n";
                     echo "<td>$k</td>\n";
                     echo "<td>$v</td>\n<tr>\n";
                 }
