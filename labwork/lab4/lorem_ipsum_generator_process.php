@@ -48,8 +48,8 @@ $lip = $_POST["lip"];
     <body>
        <div id="lorem-ipsum">
         <img src="https://loremflickr.com/800/222" width="800" height="222"/>
-        <h1>You selected <?php echo $lip ?> paragraphs of Lorum Ipsum text.</h1>
-           <h2>It is ready to be copied.</h2>
+        <h1>You Selected <?php echo $lip ?> Paragraph&#40;s&#41; of Lorem Ipsum Text</h1>
+           <h2>They're Displayed Below and Ready to be Copied</h2>
          <?php
             $li_copy = "<p id='liTxt'>";
           # output selected lorem ipsum paragraphs
