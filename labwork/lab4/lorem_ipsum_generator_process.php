@@ -59,7 +59,7 @@ $lip = $_POST["lip"];
            }
             
         ?>   
-           
+           <p><a href="lorem_ipsum_generator.html" title="Select Lorem Ipsum Paragraphs">Select Lorem Ipsum Paragraphs.</a></p>
         </div>   
     </body>
 </html>      
