@@ -1,0 +1,13 @@
+MySQL database
+Name: patrixweb
+Server: 50.62.209.47:3306
+Password halloween19fall
+
+SITE_USERS
+first_name
+last_name
+email
+password
+ip
+join_date
+
