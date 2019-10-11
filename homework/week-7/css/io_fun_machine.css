@@ -1,0 +1,26 @@
+html {
+    margin: auto;
+    width: 100%;
+    background-color: aqua;
+}
+body {
+    width: 88%;
+    background-color: #FFF;
+    padding: inherit;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+#wrapper {
+    text-align: center;
+}
+#functionMachineDiv {
+    display: inline-block;
+}
+.warning {
+    font-family: 'Righteous', cursive;
+    color: red;
+}
+.copy {
+    font-size: 75%;
+    text-align: right;
+}
