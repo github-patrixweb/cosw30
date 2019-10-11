@@ -24,3 +24,7 @@ body {
     font-size: 75%;
     text-align: right;
 }
+.responsive {
+  width: 100%;
+  height: auto;
+}
