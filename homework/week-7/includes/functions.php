@@ -32,7 +32,7 @@ function funMachine($sn1, $op, $sn2) {
         if ($op == "s") {
             if (!empty($sn1) || !empty($sn2)) {
                 $result = str_shuffle($sn1 . $sn2);
-                echo "<h3>The string&#40s&#41 input were shuffled as: $result</h3>";
+                echo "<h3>The string&#40s&#41 input, <strong>$sn1</strong> and <strong>$sn2</strong>, were shuffled as: $result</h3>";
 
             }
             else {
@@ -44,7 +44,7 @@ function funMachine($sn1, $op, $sn2) {
                 $l1 = strlen($sn1);
                 $l2 = strlen($sn2);
                 $l3 = $l1 + $l2;
-                echo "<h3>The first string has a length of $l1<br />The second string has a legnth of $l2<br />The combined length is $l3.</h3>";
+                echo "<h3>The first string, $sn1, has a length of $l1 characters<br />The second string, $sn2, has a legnth of $l2 characters<br />The combined length is $l3 characters.</h3>";
             }
             else {
                 echo "<h2 class='warning'>You selected to calculate string lengths, but failed to input any.<br />Please try again.";
