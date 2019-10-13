@@ -2,6 +2,9 @@
 // for now, 10.10.2019, this only includes a single function with several calls to internal functions
 function funMachine($sn1, $op, $sn2) {
     if (is_numeric($op)) {
+        /* strip non-numeric data from user inputs*/
+        $sn1 = preg_replace("/[^0-9.]/", "", $sn1);
+        $sn2 = preg_replace("/[^0-9.]/", "", $sn2);
         if (is_numeric($sn1) && is_numeric($sn2) ){
            // calc absolute value of arguments using operator passed
            switch ($op) {
@@ -10,7 +13,7 @@ function funMachine($sn1, $op, $sn2) {
                    break;
                case 47:
                    if ($sn2 == "0") {
-                     $result = "Undefined: division by zero is not valid";
+                     $result = "undefined: division by zero is not valid";
                        break;
                    }
                    $result = abs($sn1 / $sn2);

@@ -53,7 +53,7 @@ include "includes/functions.php";
                      </select><br />&nbsp;<br />
                      <label for="input1">Please input either a string or number</label>
                      <input type="text" name="input2" placeholder="... a string or number"><br />&nbsp;<br />
-                     <button>Calculate</button>
+                     <button>Process</button>
                  </form> 
              </div>';
             }
