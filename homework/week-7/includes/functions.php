@@ -1,10 +1,13 @@
 <?php
-// for now, 10.10.2019, this only includes a single function with several calls to internal functions
+/* 2019.10.14 went from single form to double forms: one for math, and the other for a string.  I preferred the single form, but received positive user feedback with a side note about confussion regarding string/number input.  After updating with regular expressions via preg_replace(), I second thought this as a better user solution.  The time is limited, so some features are pending indefinately.
+
+for now, 10.10.2019, this only includes a single function with several calls to internal functions */
+
 function funMachine($sn1, $op, $sn2) {
     if (is_numeric($op)) {
         /* strip non-numeric data from user inputs*/
-        $sn1 = preg_replace("/[^0-9.]/", "", $sn1);
-        $sn2 = preg_replace("/[^0-9.]/", "", $sn2);
+        $sn1 = preg_replace("/[^0-9]/", "", $sn1);
+        $sn2 = preg_replace("/[^0-9]/", "", $sn2);
         if (is_numeric($sn1) && is_numeric($sn2) ){
            // calc absolute value of arguments using operator passed
            switch ($op) {
@@ -35,11 +38,11 @@ function funMachine($sn1, $op, $sn2) {
         if ($op == "s") {
             if (!empty($sn1) || !empty($sn2)) {
                 $result = str_shuffle($sn1 . $sn2);
-                echo "<h3>The string&#40s&#41 input, <strong>$sn1</strong> and <strong>$sn2</strong>, were shuffled as: $result</h3>";
+                echo "<h3>The string input, <strong>$sn1</strong>, was shuffled as:<br />&nbsp;<br /> $result</h3>";
 
             }
             else {
-                echo "<h2 class='warning'>You selected to shuffle the strings, but failed to input any.<br />Please try again.";
+                echo "<h2 class='warning'>You selected to shuffle the string, but failed to input one.<br />Please try again.";
             }
         }
         else { // string operation strlen() a.k.a. length
@@ -47,12 +50,13 @@ function funMachine($sn1, $op, $sn2) {
                 $l1 = strlen($sn1);
                 $l2 = strlen($sn2);
                 $l3 = $l1 + $l2;
-                echo "<h3>The first string, $sn1, has a length of $l1 characters<br />The second string, $sn2, has a legnth of $l2 characters<br />The combined length is $l3 characters.</h3>";
+                echo "<h3>The string, $sn1, has a length of $l1 characters.</h3>";
             }
             else {
-                echo "<h2 class='warning'>You selected to calculate string lengths, but failed to input any.<br />Please try again.";
+                echo "<h2 class='warning'>You selected to count the length of a string, but failed to input one.<br />Please try again.";
 
             }
         }
     }
-}?>
+include 'includes/function_machine_instructions.html';    
+} ?>

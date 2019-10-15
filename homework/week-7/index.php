@@ -38,24 +38,10 @@ include "includes/functions.php";
             }    
             else
             {
-             echo '<div id="functionMachineDiv">';
-                 echo '<form action="index.php" method="post" id="functionMachineForm">';
-                    echo ' <label for="input1">Please input either a string or number</label>';
-                     echo '<input type="text" name="input1" placeholder="... a string or number"><br />&nbsp;<br />
-                     <select name="operator">
-                         <option value="">Please select an operator.</option>
-                         <option value="42">Numbers: multiply &#40;&#42;&#41;</option>
-                         <option value="47">Numbers: divide &#40;&#92;&#41;</option>
-                         <option value="43">Numbers: add &#40;&#43;&#41;</option>
-                         <option value="45">Numbers: subtract &#40;&#45;&#41;</option>
-                         <option value="s">Strings: shuffle &#40;&#46;&#8226;&#9679;&#41;</option>
-                         <option value="l">Strings: lengths &#40;&#63;&#41;</option>
-                     </select><br />&nbsp;<br />
-                     <label for="input1">Please input either a string or number</label>
-                     <input type="text" name="input2" placeholder="... a string or number"><br />&nbsp;<br />
-                     <button>Process</button>
-                 </form> 
-             </div>';
+                echo '<div id="functionMachineDiv">';
+                include 'includes/double_form.html';
+                include 'includes/function_machine_instructions.html';    
+                echo '</div>';
             }
               include 'includes/footer.php'; ?> 
             </div> 
