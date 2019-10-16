@@ -4,6 +4,7 @@
 for now, 10.10.2019, this only includes a single function with several calls to internal functions */
 
 function funMachine($sn1, $op, $sn2) {
+    echo '<div id="functionMachineDiv">';
     if (is_numeric($op)) {
         /* strip non-numeric data from user inputs*/
         $sn1 = preg_replace("/[^0-9]/", "", $sn1);
@@ -59,4 +60,5 @@ function funMachine($sn1, $op, $sn2) {
         }
     }
 include 'includes/function_machine_instructions.html';    
+echo '</div>';    
 } ?>
