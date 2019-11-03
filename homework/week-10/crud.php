@@ -38,14 +38,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<h2 class='error'>First name is required.</h2>";
     }
     if (!empty($_POST['last_name'])){
-        $last_name = $_POST['last_name'];
+        $last_name = str_replace("'","&#39;",$_POST['last_name']);
         ++$valid_input;
     }
     else {
         echo "<h2 class='error'>Last name is required.</h2>";
     }
     if (!empty($_POST['email'])){
-        $email = $_POST['email'];
+        $email = str_replace("'","&#39;",$_POST['email']);;
         ++$valid_input;
     }
     else {
@@ -58,7 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         else {
             ++$valid_input;
         }
-        $password = $_POST['password'];
+        $password = str_replace("'","&#39;",$_POST['password']);
 
     }
     else {
