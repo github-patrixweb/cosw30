@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $valid_input = 0;
     // if any of the 4 form variable are empty, display error
     if (!empty($_POST['first_name'])){
-        $first_name = $_POST['first_name'];
+        $first_name = str_replace("'","&#39;",$_POST['first_name']);
         ++$valid_input;
     }
     else {
