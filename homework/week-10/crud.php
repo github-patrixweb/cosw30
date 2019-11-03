@@ -1,14 +1,17 @@
 <?php
 // Add the database connection
-
+require 'database.php;'
 /*
 *   CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT
 *   NEW USER INTO THE DATABASE
 */
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$email = $_POST['email'];
+$password = $_POST['password'],
 }
-
+echo "$first_name $last_name, $email, $password";
 
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE

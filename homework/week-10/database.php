@@ -6,5 +6,5 @@ $db_pass   = getenv('DB_PASS');
 $db_name     = getenv('DB_NAME');
 
 // Establish the connection to the database
-$connection = mysqli_connect($hostname, $username, $password, $dbname);
+$connection = mysqli_connect($db_hostname, $db_user, $db_pass, $db_name);
 ?>
