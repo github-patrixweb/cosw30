@@ -1,0 +1,53 @@
+html {
+    margin: auto;
+    width: 100%;
+    background-color: aqua;
+}
+body {
+    width: 88%;
+    background-color: #FFF;
+    padding: inherit;
+    margin: auto;
+    font-family: 'Libre Baskerville', serif;
+}
+#wrapper {
+    /* this is the outer div, so text-align is inherited by child */
+    text-align: center;
+}
+#innerContent {
+    /* this is the child of div.wrapper, and for page to align center, the parent must be text-align: center, and this child must display: inline-block */
+    display: inline-block;
+    margin: auto;
+}
+.error {
+    font-family: 'Open Sans', sans-serif;
+    color: red;
+}
+.success {
+    color: green;
+    font-family: 'Open Sans', sans-serif;
+}
+/* now define form styles */
+#formLables {
+    text-align: right;
+    width: 345px;
+    float: left;
+}
+#formFiels {
+    text-align: left;
+    float: right;
+}
+
+/* lets set some selectors for smaller screens */
+@media only screen and (max-width: 1200px) {
+      body {
+        width: 100%;
+  }
+    #formLables {
+        display: none;
+    }
+    #formFiels {
+        clear: both;
+}
+
+}
