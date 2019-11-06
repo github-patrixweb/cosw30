@@ -15,7 +15,7 @@
                     <?php
                     // Add the database connection
                     include 'includes/database.php';
-                    //set sticky form variables to empty strings in casse script doen not change them.
+                    //set sticky form variables to empty strings in casse script does not change them.
                     $first_name = "";
                     $last_name = "";    
                     $password = "";
@@ -134,7 +134,9 @@
                     *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
                     */
                     // Create your query
-                    $query = 'SELECT * FROM USER_OLESIAK';
+                    $query = 'SELECT * FROM USER_OLESIAK
+                            ORDER BY user_id DESC
+                            LIMIT 0, 10';
 
                     // Run your query
                     $result = mysqli_query($connection, $query);
@@ -172,7 +174,7 @@
                         // Output an error
                         die("<h2 class='error'>Connection failed:  $connection->connect_error</h2>");
                     }  
-                    ?> 
+                    include 'includes/footer.html'?> 
                 </div>   
             </div>
         </body>
