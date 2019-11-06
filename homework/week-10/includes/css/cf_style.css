@@ -37,6 +37,10 @@ body {
     text-align: left;
     float: right;
 }
+#copyP {
+    text-align: right;
+    font-size: 8px;
+}
 
 /* lets set some selectors for smaller screens */
 @media only screen and (max-width: 1200px) {
