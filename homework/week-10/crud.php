@@ -125,7 +125,8 @@ include 'includes/header.html';
 
                 // Check if the database returned anything
                 if($result) {
-                    echo "   <table border='1'>\n
+                    echo "   <div id='userTable'>\n
+                            <table border='1'>\n
                                 <thead>\n
                                     <tr>\n
                                         <th>First Name</th>\n
@@ -147,7 +148,8 @@ include 'includes/header.html';
                             </tr>";
                     }
                     echo "</tbody>
-                    </table>";
+                    </table>
+                    </div>";
                     // Next, query all users for select
                     $query = 'SELECT * FROM USER_OLESIAK
                         ORDER BY first_name';
