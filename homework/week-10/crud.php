@@ -128,10 +128,11 @@ include 'includes/header.html';
                     echo "   <table border='1'>\n
                                 <thead>\n
                                     <tr>\n
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Email</th>
-                                        <th>Password</th>
+                                        <th>First Name</th>\n
+                                        <th>Last Name</th>\n
+                                        <th>Email</th>\n
+                                        <th>Password</th>\n
+                                        <th>Edit</th>\n
                                     </tr>
                                 </thead>
                                 <tbody>";
@@ -142,6 +143,7 @@ include 'includes/header.html';
                                 <td>" . $row['last_name'] . "</td>\n
                                 <td>" . $row['email'] . "</td>\n
                                 <td>" . $row['password'] . "</td>\n
+                                <td><a href='update.php?id=" . $row['user_id'] . "' title='edit...'>Update this record</a></td>\n
                             </tr>";
                     }
                     echo "</tbody>
@@ -153,15 +155,15 @@ include 'includes/header.html';
                     // creat dropdown of all users ordered by first_name
                     echo    "<h3>Here is a list of all active users on Cycle Forums</h3>\n
                             <h4>Select any user and press the button to edit the data</h4>\n
-                            <form action='update.php'>\n
-                                <select>\n";
+                            <form action='update.php' method='get'>\n
+                                <select name='id'>\n";
                     $result = mysqli_query($connection, $query);
                     while($row = $result->fetch_assoc()) {
-                        echo "                                    <option name='z' value='" . $row['user_id'] . "'>". $row['first_name'] . " " . $row['last_name'] . "</option>\n";
+                        echo "<option value=\"" . $row['user_id'] . "\">". $row['first_name'] . " " . $row['last_name'] . "</option>\n";
                     }
                     echo        "</select>\n
-                                <input type='button'>Edit the selected user
-                                 <input type='image' src='images/mysql_dol.JPG' alt='edit user data' width='298' height='253'>\n
+                                <button>Edit the selected user</button>\n
+                                 <input type='image' src='images/mysql_dol.JPG' alt='edit user data' width='29' height='25'>\n
                             </form>";
                 }
                  else {
