@@ -1,12 +1,11 @@
 <?php
     $method = $_SERVER['REQUEST_METHOD'];
-    if (!isset($_GET['id'])) {
-        header("Location: crud.php"); 
-    } else {
+    if (isset($_GET['id'])) {
         $id = $_GET['id'];
-    }
-    if (isset($_POST['id'])){
+    } elseif (isset($_POST['id'])){
         $id = $_POST['id'];
+    } else {
+            header("Location: crud.php"); 
     }
                         
     echo "<h1>Update record ID:  $id</h1>\n
@@ -15,6 +14,7 @@
                 if ($method == 'POST') {
                     include 'includes/update_post.php';
                 } elseif ($method == 'GET') {
+                    include 'includes/update_get.php';
                     include 'includes/update_form.php';    
                 } else {
                     header("Location: crud.php");

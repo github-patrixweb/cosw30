@@ -35,20 +35,32 @@
                         } 
                         include 'includes/update_form.php';
                     } else {
+                        // sort by latest; logic required
+                        $query = "SELECT MAX(ereg) as editup
+                                FROM USER_OLESIAK";
+                   
+                        $result = mysqli_query($connection, $query);
+                        while($row = $result->fetch_assoc()) {
+                            $ereg = $row['editup'] + 1;
+                        }
+                
                         $query = "UPDATE USER_OLESIAK
                                 SET first_name='$first_name',
                                 last_name='$last_name',
                                 email='$email',
                                 password='$password',
-                                active=$active
+                                active=$active,
+                                ereg=$ereg
                                 WHERE user_id=$id" ;
+                        
                     
                         if ($connection->query($query) === TRUE) {
+                            echo "<h2 class='success'>Record Updated Sucessfully!</h2>";
                             include 'includes/update_form.php';
                             //header("Location: crud.php");
                         } 
                         else {
-                            echo "Error updating record: hello world; $query" . $connection->error;
+                            echo "<h2 class='error'>Error updating record</h2>";//$query" . $connection->error;
                             include 'includes/update_form.php';
                         }
                     }    
