@@ -116,16 +116,22 @@ include 'includes/header.html';
 
             /*
             *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
+SELECT `USER_OLESIAK`.*
+FROM `USER_OLESIAK`
+WHERE (`USER_OLESIAK`.`active` =1)
+ORDER BY `USER_OLESIAK`.`update_time` DESC
+
             */
             // Create your query
             $query = 'SELECT * FROM USER_OLESIAK
                     WHERE active=1
-                    ORDER BY user_id DESC
+                    ORDER BY ereg DESC
                     LIMIT 0, 10';
-           /* $query = 'SELECT first_name, last_name, email, password, 
-                        user_id, timestamp( `update_time` ) as ut
-                        FROM USER_OLESIAK
-                        ORDER BY 6 DESC';               */
+           /* $query = "SELECT `USER_OLESIAK`.*
+                        FROM `USER_OLESIAK`
+                        WHERE (`USER_OLESIAK`.`active` =1)
+                        ORDER BY `USER_OLESIAK`.`update_time` DESC;";*/
+               
             // Run your query
             $result = mysqli_query($connection, $query);
 
