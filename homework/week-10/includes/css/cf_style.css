@@ -64,14 +64,19 @@ a:active {
     }
 
 /* now define form styles */
-#formLables {
+#formLabels {
     text-align: right;
     width: 345px;
+    padding-left: 10%;
     float: left;
 }
-#formFiels {
+#formFields {
     text-align: left;
-    float: right;
+    padding-left: .3em;
+    float: left;
+}
+.clear {
+    clear: both;
 }
 #womanBike {
     clear: both;
@@ -105,16 +110,12 @@ th, td {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-</style>
 /* lets set some selectors for smaller screens */
 @media only screen and (max-width: 1200px) {
-      body {
-        width: 100%;
-  }
-    #formLables {
+    #formLabels {
         display: none;
     }
-    #formFiels {
+    #formFields {
         clear: both;
 }
 }
