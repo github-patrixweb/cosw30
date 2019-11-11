@@ -59,83 +59,71 @@ include 'includes/header.html';
                 }
                 // if all input not empty after white space stripped, true email filter, and passwords match, input in database
                 if ($valid_input == 4) {
-                    $query = "INSERT INTO USER_OLESIAK (first_name, last_name, email, password, active)
-                                VALUES ('$first_name', '$last_name', '$email', '$password', 1)";
+                    $query = "SELECT MAX(ereg) as editup
+                    FROM USER_OLESIAK";
+                    $result = mysqli_query($connection, $query);
+                    if ($result){
+                        $row = $result->fetch_assoc();
+                        $ereg = $row['editup'] + 1;
+                    }else{
+                        echo "<p>No max value returned: $query</p>";
+                    }
+
+                    $query = "INSERT INTO USER_OLESIAK (first_name, last_name, email, password, active, ereg)
+                                VALUES ('$first_name', '$last_name', '$email', '$password', 1, $ereg)";
                     if ($connection->query($query) === true) {
-                        echo "<h2 class='success'>$first_name $last_name, thank you for registering at Cycle Forums!<br />  Your record was successfully added to our system.<br />You may now login and enjoy Cycle Forums.</h2>";
+                        echo "<h2 class='success'>$first_name $last_name, thank you for registering at Cycle Forums!<br />  
+                        Your record was successfully added to our system.<br />
+                        You may now login and enjoy Cycle Forums.</h2>";
                         $first_name = "";
                         $last_name = "";
                         $email = "";
                         $password = "";
-                    }
-                    else {
+                    } else {
                          echo "<h2 class='error'>Error:  $query <br> $connection->error</h2>";
                     }
                 }
             ?>
 
             <h1>Register for Cycle Forums</h1>
-            <div id="formLabels">
-                <label for="first_name" class="formLable">First Name</label>
-                <br />&nbsp;<br />
-
-                <label for="last_name" class="formLable">Last Name</label>
-                <br />&nbsp;<br />
-
-                <label for="email" class="formLable">Email</label>
-                <br />&nbsp;<br />
-
-                <label for="password" class="formLable">Password</label>
-                <br />&nbsp;<br />
-
-                <label for="confirm_password" class="formLable">Retype Password</label>
-            </div>
-            <div id="formFields">
-                <form action="crud.php" method="POST">
-
-                    <input type="text" id="first_name" name="first_name" value="<?php echo $first_name ?>" placeholder="First Name"><br />&nbsp;<br />
-
-
-                    <input type="text" id="last_name" name="last_name" value="<?php echo $last_name ?>" placeholder="Last Name"><br />&nbsp;<br />
-
-
-                    <input type="email" id="email" name="email" value="<?php echo $email ?>" placeholder="email"><br />&nbsp;<br />
+            <form action="crud.php" method="POST">
+                <fieldset>
+                    <label for="first_name" class="formLable">First Name</label>
+                    <input type="text" id="first_name" name="first_name" value="<?php echo $first_name ?>" placeholder="First Name">
+                </fieldset>
+                <fieldset>
+                    <label for="last_name" class="formLable">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" value="<?php echo $last_name ?>" placeholder="Last Name">
+                </fieldset>
+                <fieldset>
+                    <label for="email" class="formLable">Email</label>
+                    <input type="email" id="email" name="email" value="<?php echo $email ?>" placeholder="email">
+                </fieldset>
+                <fieldset>
+                    <label for="password" class="formLable">Password</label>
+                    <input type="password" id="password" name="password" value="<?php echo $password ?>" placeholder="Password of 8 or more characters excluding white space">
+                </fieldset>
+                <fieldset>
+                    <label for="confirm_password" class="formLable">Retype Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Retype password of 8 or more characters excluding white space">
+                </fieldset>
+                <button>Register</button>
+            </form>
 
 
-                    <input type="password" id="password" name="password" value="<?php echo $password ?>" placeholder="Password of 8 or more characters excluding white space"><br />&nbsp;<br />
-
-                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Retype password of 8 or more characters excluding white space"><br />&nbsp;<br />
-
-                    <button>Register</button>
-
-                </form>
-            </div>
-
-            <h2 class="clear">Latest Registered Users on Cycle Forums</h2>
+            <h2 class="clear">Latest Registered / Updated Users on Cycle Forums</h2>
+            <h3>Below the table is a drop down / pop up menu of all users available for edit</h3>
             <?php
 
-            /*
-            *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
-SELECT `USER_OLESIAK`.*
-FROM `USER_OLESIAK`
-WHERE (`USER_OLESIAK`.`active` =1)
-ORDER BY `USER_OLESIAK`.`update_time` DESC
-
-            */
-            // Create your query
+            
             $query = 'SELECT * FROM USER_OLESIAK
                     WHERE active=1
                     ORDER BY ereg DESC
                     LIMIT 0, 10';
-           /* $query = "SELECT `USER_OLESIAK`.*
-                        FROM `USER_OLESIAK`
-                        WHERE (`USER_OLESIAK`.`active` =1)
-                        ORDER BY `USER_OLESIAK`.`update_time` DESC;";*/
-               
-            // Run your query
+           
             $result = mysqli_query($connection, $query);
 
-            // Check if the database returned anything
+           
             if($result) {
                 echo "   <div id='userTable'>\n
                         <table border='1'>\n
@@ -149,7 +137,7 @@ ORDER BY `USER_OLESIAK`.`update_time` DESC
                                 </tr>
                             </thead>
                             <tbody>";
-                // output data of each row
+           
                 while($row = $result->fetch_assoc()) {
                     echo "<tr>
                             <td>" . $row['first_name'] . "</td>\n
@@ -162,12 +150,12 @@ ORDER BY `USER_OLESIAK`.`update_time` DESC
                 echo "</tbody>\n
                 </table>\n
                 </div>\n";
-                // Next, query all users for select
+           
                 $query = 'SELECT * FROM USER_OLESIAK
                             WHERE active>0
                             ORDER BY first_name';
 
-                // creat dropdown of all users ordered by first_name
+           
                 echo    "<h3>Here is a list of all active users on Cycle Forums</h3>\n
                         <h4>Select any user and press the button to edit the data</h4>\n
                         <form action='update.php' method='get'>\n
