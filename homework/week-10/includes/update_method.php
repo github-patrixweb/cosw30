@@ -14,7 +14,6 @@
                 if ($method == 'POST') {
                     include 'includes/update_post.php';
                 } elseif ($method == 'GET') {
-                    include 'includes/update_get.php';
                     include 'includes/update_form.php';    
                 } else {
                     header("Location: crud.php");

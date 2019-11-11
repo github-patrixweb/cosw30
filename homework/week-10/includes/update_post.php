@@ -36,26 +36,31 @@
                         include 'includes/update_form.php';
                     } else {
                         // sort by latest; logic required
-                        $query = "SELECT MAX(ereg) as editup
-                                FROM USER_OLESIAK";
-                   
-                        $result = mysqli_query($connection, $query);
-                        while($row = $result->fetch_assoc()) {
-                            $ereg = $row['editup'] + 1;
+                            $query = "SELECT MAX(ereg) as editup
+                            FROM USER_OLESIAK";
+                            $result = mysqli_query($connection, $query);
+                            if ($result){
+                                $row = $result->fetch_assoc();
+                                $ereg = $row['editup'] + 1;
+                            }else{
+                                echo "<p>No max value returned: $query</p>";
+                            }
+
                         }
-                
+                        $toup = date(DATE_W3C);
                         $query = "UPDATE USER_OLESIAK
                                 SET first_name='$first_name',
                                 last_name='$last_name',
                                 email='$email',
                                 password='$password',
                                 active=$active,
+                                update_time='$toup',
                                 ereg=$ereg
                                 WHERE user_id=$id" ;
                         
                     
                         if ($connection->query($query) === TRUE) {
-                            echo "<h2 class='success'>Record Updated Sucessfully!</h2>";
+                            echo "<h2 class='success' title='Sucessfully: in a way that accomplishes a desired aim or result. 'she has successfully completed her mission'>Record Updated Sucessfully!</h2>";
                             include 'includes/update_form.php';
                             //header("Location: crud.php");
                         } 
@@ -63,7 +68,4 @@
                             echo "<h2 class='error'>Error updating record</h2>";//$query" . $connection->error;
                             include 'includes/update_form.php';
                         }
-                    }    
-  
-  
 ?>
