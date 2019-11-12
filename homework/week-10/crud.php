@@ -59,16 +59,7 @@ include 'includes/header.html';
                 }
                 // if all input not empty after white space stripped, true email filter, and passwords match, input in database
                 if ($valid_input == 4) {
-                    $query = "SELECT MAX(ereg) as editup
-                    FROM USER_OLESIAK";
-                    $result = mysqli_query($connection, $query);
-                    if ($result){
-                        $row = $result->fetch_assoc();
-                        $ereg = $row['editup'] + 1;
-                    }else{
-                        echo "<p>No max value returned: $query</p>";
-                    }
-
+                    $ereg = dbTC_Max($connection, 'USER_OLESIAK', 'ereg');
                     $query = "INSERT INTO USER_OLESIAK (first_name, last_name, email, password, active, ereg)
                                 VALUES ('$first_name', '$last_name', '$email', '$password', 1, $ereg)";
                     if ($connection->query($query) === true) {
@@ -107,7 +98,10 @@ include 'includes/header.html';
                     <label for="confirm_password" class="formLable">Retype Password</label>
                     <input type="password" id="confirm_password" name="confirm_password" placeholder="Retype password of 8 or more characters excluding white space">
                 </fieldset>
-                <button>Register</button>
+                <fieldset>
+                    <button>Register</button>
+                </fieldset>
+                
             </form>
 
 
