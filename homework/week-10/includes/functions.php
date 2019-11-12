@@ -19,5 +19,27 @@ function validateEmail($email){
     }
     return $email;
 }
-
+function dbTC_Max($conn, $tableName, $columnName){
+    // this function requires db connection, table name, and column name
+    // it then finds the maximum value of that column, adds one, and returns the result
+    $query = "SELECT MAX($columnName) as editup
+    FROM $tableName";
+    $result = mysqli_query($conn, $query);
+    if ($result){
+        $row = $result->fetch_assoc();
+        $ereg = $row['editup'] + 1;
+    }else{
+        $ereg = 0;
+    }
+    return $ereg;
+}
+function formInput($inputType, $labelName, $inputName, $value){
+    // this function generates form fiels
+    // pass: input type, label name, input name, and value
+    echo "<fieldset>\n
+        <legend>$labelName:</legend>\n
+        <label for='$inputName'>$labelName:</label>\n
+        <input type='$inputType' value='$value' name='$inputName'>\n
+    </fieldset>\n";
+}
 ?>

@@ -3,6 +3,7 @@
                     $last_name = cleanUserInput($_POST['last_name']);
                     $email = cleanUserInput($_POST['email']);
                     $password = cleanUserInput($_POST['password']);
+                    $confirm_password = cleanUserInput($_POST['confirm_password']); 
                     if (!isset($_POST['active'])){
                         $active = 1;
                     }else{
@@ -25,26 +26,21 @@
                     }
                     if ($password == "") {
                         $error[] = "Password is required.";
-                    }
-                    if (strlen($password) < 8){
+                    }else{
+                        if (strlen($password) < 8){
                         $error[] = "Password must contain at least 8 characters.";
+                        }else{
+                            if ($password != $confirm_password){
+                                $error[] = "Passwords DO NOT match.";
+                            }
+                        }
                     }
                     if (count($error) > 0){
                         foreach( $error as $value ) { 
                             echo "<h2 class='error'>$value</h2>"; 
                         } 
-                        include 'includes/update_form.php';
                     } else {
-                        // sort by latest; logic required
-                            $query = "SELECT MAX(ereg) as editup
-                            FROM USER_OLESIAK";
-                            $result = mysqli_query($connection, $query);
-                            if ($result){
-                                $row = $result->fetch_assoc();
-                                $ereg = $row['editup'] + 1;
-                            }else{
-                                echo "<p>No max value returned: $query</p>";
-                            }
+                           $ereg = dbTC_Max($connection, 'USER_OLESIAK', 'ereg');
 
                         }
                         $toup = date(DATE_W3C);
@@ -60,12 +56,9 @@
                         
                     
                         if ($connection->query($query) === TRUE) {
-                            echo "<h2 class='success' title='Sucessfully: in a way that accomplishes a desired aim or result. 'she has successfully completed her mission'>Record Updated Sucessfully!</h2>";
-                            include 'includes/update_form.php';
-                            //header("Location: crud.php");
+                            header("Location: crud.php");
                         } 
                         else {
-                            echo "<h2 class='error'>Error updating record</h2>";//$query" . $connection->error;
                             include 'includes/update_form.php';
                         }
 ?>
