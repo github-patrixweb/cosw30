@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Validate the form data
     // Check if the user's email and password are in the database
     $query = "SELECT user_id, first_name
-                FROM USER_POLESIAKE
+                FROM USER_OLESIAKE
                 WHERE email = '$email' 
                 AND password = '$password'";
 
