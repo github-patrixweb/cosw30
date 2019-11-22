@@ -21,6 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 FROM USER_OLESIAK
                 WHERE email = '$email' 
                 AND password = '$password'";
+    $query = "SELECT * FROM USER_OLESIAK";
 
     $result = mysqli_query($connection, $query);
 
