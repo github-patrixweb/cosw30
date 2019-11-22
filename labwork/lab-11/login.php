@@ -21,8 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 FROM USER_OLESIAK
                 WHERE email = '$email' 
                 AND password = '$password'";
-    $query = "SELECT * FROM USER_OLESIAK";
-
+    
     $result = mysqli_query($connection, $query);
 
     // If they are, log them in
@@ -37,8 +36,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     // If they aren't, show the log in form with an error
     } else { 
-        echo $query;
-        print_r($result);
         echo 'The email password combination did not match any records.';
     }
 } // END of $_SERVER['REQUEST_METHOD']
