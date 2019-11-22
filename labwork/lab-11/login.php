@@ -36,6 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     // If they aren't, show the log in form with an error
     } else { 
+        echo $query;
         echo 'The email password combination did not match any records.';
     }
 } // END of $_SERVER['REQUEST_METHOD']
