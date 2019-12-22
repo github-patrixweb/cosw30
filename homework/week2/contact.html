@@ -1,108 +1,110 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="background-color: navy">
     <!-- 
     patrixweb
     2019.9.9
     contact.html
     COSW 30 week 2, homework 2
-    -->
-<head>
-    <link rel="icon" type="image/png" sizes="32x32" href="
-http://patricks-web.22web.org/cosw30/homework/week-2/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="http://patricks-web.22web.org/cosw30/homework/week-2/images/favicon-16x16.png">
-    <link rel="manifest" href="
-http://patricks-web.22web.org/cosw30/homework/week-2/images/site.webmanifest">
-    <link rel="mask-icon" href="
-http://patricks-web.22web.org/cosw30/homework/week-2/images/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="apple-touch-icon" sizes="76x76" href="
-http://patricks-web.22web.org/cosw30/homework/week-2/images/apple-touch-icon.png">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-   <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0"> 
-    <script>
-        function validateForm(){
-            x = document.forms["contact-Selina"]["gender"].value;
-            if (x == "null") {
-                alert("Please select a gender");
-                document.getElementById('gender').focus();
-                return false;
+        -->
+    <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="
+    http://patricks-web.22web.org/cosw30/homework/week-2/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="http://patricks-web.22web.org/cosw30/homework/week-2/images/favicon-16x16.png">
+        <link rel="manifest" href="
+    http://patricks-web.22web.org/cosw30/homework/week-2/images/site.webmanifest">
+        <link rel="mask-icon" href="
+    http://patricks-web.22web.org/cosw30/homework/week-2/images/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="76x76" href="
+    http://patricks-web.22web.org/cosw30/homework/week-2/images/apple-touch-icon.png">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+       <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0"> 
+        <script>
+            function validateForm(){
+                x = document.forms["contact-Selina"]["gender"].value;
+                if (x == "null") {
+                    alert("Please select a gender");
+                    document.getElementById('gender').focus();
+                    return false;
+                }
+                x = document.forms["contact-Selina"]["age"].value;
+                if (x == "null") {
+                    alert("Please select an age group");
+                    document.getElementById('age').focus();
+                    return false;
+                }
+
+
+        return true;
+
+
             }
-            x = document.forms["contact-Selina"]["age"].value;
-            if (x == "null") {
-                alert("Please select an age group");
-                document.getElementById('age').focus();
-                return false;
-            }
-                
 
-    return true;
+        </script>
+        <meta charset="utf-8">
+        <title>Contact Selina Meyer</title>
+    </head>
+    <body style="background-color: red; width: 60%; margin: auto">
+        <div id="container" style="margin: auto; background-color: white; width: 40%; padding: 1em">
+           <header>
+                <h1>Contact Selina Meyer</h1>
+                <a href="https://en.wikipedia.org/wiki/Veep" target="_new"><img src="images/Selina_Meyer_access-2019-9-8.jpg" height="201" title="Selina Meyer"></a>
+                <h2>2020 Candidate for U.S. President</h2>
+            </header>
+            <section>
+                <form name="contact-Selina" action="process_contact.php"
+                onsubmit="return validateForm()" method="post">
+                    <p>Fields marked with * are required</p>
+                    <p>
+                        <label for"first-name">*Fist Name:</label> 
+                        <input type="text" name="first-name" required autofocus /></p>
+                    <p><label for"last-name">*Last Name:</label> 
+                        <input type="text" name="last-name" required /></p>
+                    <p><label for"email">*E-mail:</label> 
+                        <input type="email" name="email" required /></p>
+                        <p><label>*Gender:
+                            <select name="gender" id='gender'>
+                                <option value="null">Please select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Prefer Not to Say">Prefer Not to Say</option>
+                            </select></label></p>
 
+                    <p><label>*Age:
+                        <select name="age" id="age">
+                            <option value="null">Please select age</option>
+                            <option value="0-29">Under 30</option>
+                            <option value="30-60">Between 30 and 60</option>
+                            <option value="60+">Over 60</option>
+                        </select></label></p>
 
-        }
-        
-    </script>
-	<meta charset="utf-8">
-	<title>Contact Selina Meyer</title>
-</head>
-<body>
-    <header>
-        <h1>Contact Selina Meyer</h1>
-        <a href="https://en.wikipedia.org/wiki/Veep" target="_new"><img src="http://patricks-web.22web.org/cosw30/homework/week-2/images/Selina_Meyer_access-2019-9-8.jpg" height="201" title="Selina Meyer"></a>
-        <h2>2020 Candidate for U.S. President</h2>
-    </header>
-    <section>
-        <form name="contact-Selina" action="process_contact.php"
-        onsubmit="return validateForm()" method="post">
-            <p>Fields marked with * are required</p>
-            <p>
-                <label for"first-name">*Fist Name:</label> 
-                <input type="text" name="first-name" required autofocus /></p>
-            <p><label for"last-name">*Last Name:</label> 
-                <input type="text" name="last-name" required /></p>
-            <p><label for"email">*E-mail:</label> 
-                <input type="email" name="email" required /></p>
-            	<p><label>*Gender:
-	                <select name="gender" id='gender'>
-		                <option value="null">Please select gender</option>
-		                <option value="Male">Male</option>
-		                <option value="Female">Female</option>
-		                <option value="Prefer Not to Say">Prefer Not to Say</option>
-                	</select></label></p>
+                    <p><lable for="interests">Interests<br />
+                        <input type="checkbox" name="interest1" value="NARAL Pro-Choice America">NARAL Pro-Choice America<br />
+                        <input type="checkbox" name="interest2" value="National Right to Life Committee">National Right to Life Committee<br />
+                        <input type="checkbox" name="interest3" value="Planned Parenthood Action Fun">Planned Parenthood Action Fund<br />
+                        <input type="checkbox" name="interest4" value="Democrats for Life of America">Democrats for Life of America<br />
+                        <input type="checkbox" name="interest5" value="Emily's List">Emily's List<br />
+                        <input type="checkbox" name="interest6" value="Family Policy Alliance">Family Policy Alliance
+                    </lable></p>    
+                    <p><label for="contribution">Contribution Amount
+                        <input type="number" value=0 name="contribution" min="0">
+                    </label></p>    
 
-	        <p><label>*Age:
-	            <select name="age" id="age">
-	                <option value="null">Please select age</option>
-		            <option value="0-29">Under 30</option>
-		            <option value="30-60">Between 30 and 60</option>
-		            <option value="60+">Over 60</option>
-	            </select></label></p>
-	
-            <p><lable for="interests">Interests<br />
-                <input type="checkbox" name="interest1" value="NARAL Pro-Choice America">NARAL Pro-Choice America<br />
-                <input type="checkbox" name="interest2" value="National Right to Life Committee">National Right to Life Committee<br />
-                <input type="checkbox" name="interest3" value="Planned Parenthood Action Fun">Planned Parenthood Action Fund<br />
-                <input type="checkbox" name="interest4" value="Democrats for Life of America">Democrats for Life of America<br />
-                <input type="checkbox" name="interest5" value="Emily's List">Emily's List<br />
-                <input type="checkbox" name="interest6" value="Family Policy Alliance">Family Policy Alliance
-            </lable></p>    
-            <p><label for="contribution">Contribution Amount
-                <input type="number" value=0 name="contribution" min="0">
-            </label></p>    
-            
-            <p><label>Sign up for our email list?
-                <input type="checkbox" name="email-list" checked/>
-            </label></p>
-            
-            <p><textarea name="message" rows="10" cols="30" placeholder="Optional comments"></textarea>
-                </p>
-            
-            <p><input type="submit" value="Submit"/></p>
-            <br />&nbsp; <br />&nbsp; <br />&nbsp; <br />&nbsp; <br />&nbsp; 
-        </form>
-    </section>
-    <footer>
-       <a href='https://www.usa.gov/register-to-vote' title='Register to Vote' target='_blank'><img src="http://patricks-web.22web.org/cosw30/homework/week-2/images/reg2vote123.png" alt="Register to Vote"></a>
-        <a href="https://en.wikipedia.org/wiki/Veep">Wiki entry for Veep</a>
-    </footer>
-</body>
+                    <p><label>Sign up for our email list?
+                        <input type="checkbox" name="email-list" checked/>
+                    </label></p>
+
+                    <p><textarea name="message" rows="10" cols="30" placeholder="Optional comments"></textarea>
+                        </p>
+
+                    <p><input type="submit" value="Submit"/></p>
+                    <br />&nbsp; <br />&nbsp; <br />&nbsp; <br />&nbsp; <br />&nbsp; 
+                </form>
+            </section>
+            <footer>
+               <a href='https://www.usa.gov/register-to-vote' title='Register to Vote' target='_blank'><img src="images/reg2vote123.png" alt="Register to Vote"></a>
+                <a href="https://en.wikipedia.org/wiki/Veep">Wiki entry for Veep</a>
+            </footer>
+        </div> 
+    </body>
 </html>
