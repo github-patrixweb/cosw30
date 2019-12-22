@@ -15,7 +15,8 @@
        <title>LBCC Tuition Calculator Results</title>
     </head>
     <body>
-        <img src="http://elethompson.com/old_site/php/homework2/images/lbcc.gif" alt="Long Beach City College ">
+        <div id="tuition-calc">
+            <img src="http://elethompson.com/old_site/php/homework2/images/lbcc.gif" alt="Long Beach City College ">
 
 <?php
         
@@ -38,6 +39,7 @@
         echo "<p><strong>Total College Balance Due: $" . number_format($units * $tuition_rate + $mandatory_fees + $optional_fees - $scholarship) . "</strong></p>\n"
         
         
-?>        
+?>    
+    </div>
   </body>
 </html>      
