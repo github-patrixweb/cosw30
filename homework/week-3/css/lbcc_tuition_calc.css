@@ -1,0 +1,23 @@
+html {
+        background-color: red;
+        background-image: url('http://patrixweb.easydoesitbooksandgifts.com/images/lbcc_lb_text.jpg');
+}
+body {
+        font-family: 'Montserrat', sans-serif;   
+        width: 75%;
+        margin: auto;
+        background-color: red;
+        padding: 1em;
+}
+#tuition-calc {
+        width: 44%;
+        background-color: white;
+        margin: auto;
+        padding: 1.5em;
+}
+img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+}
