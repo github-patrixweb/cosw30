@@ -127,6 +127,6 @@ COSW 30 week 2, homework 2
                     echo  "<a href='https://www.usa.gov/register-to-vote' title='Register to Vote' target='_blank'><img src='images/reg2vote123.png' alt='Register to Vote'></a>\n        <a href='https://en.wikipedia.org/wiki/Veep'>Wiki entry for Veep</a>\n";
 
                 echo "</footer>\n";
-        echo "</div>\n:;
+        echo "</div>\n";
         echo "</body>\n";
 echo "</html>";
