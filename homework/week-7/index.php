@@ -17,25 +17,6 @@ include "includes/functions.php";
        <title>Function Machine</title>
     </head>
     <body>
-      <div class="container">
-      <?php
-       for ($i = 1; $i < 8; $i++){
-            echo "<div class='square black'>\n<div class='square'>\n";
-       }
-          for ($i = 1; $i < 8; $i++){
-            echo "</div>\n;"
-          }
-
-?>
-      <div class="container1">
-      <?php
-       for ($i = 1; $i < 8; $i++){
-           echo "<div class='square black'>\n<div class='square'>\n";
-}       for ($i = 1; $i < 8; $i++){
-           echo "</div>\n";
-}
-
-?>
         <div id="wrapper">
          <?php include 'includes/header.php' ?>
          <?php /* control structure to check if form submitted or not
