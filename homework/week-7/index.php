@@ -20,14 +20,19 @@ include "includes/functions.php";
       <div class="container">
       <?php
        for ($i = 1; $i < 8; $i++){
-    echo "<div class='square black'>\n<div class='square'>";
-}
+            echo "<div class='square black'>\n<div class='square'>\n";
+       }
+          for ($i = 1; $i < 8; $i++){
+            echo "</div>\n;"
+          }
 
 ?>
       <div class="container1">
       <?php
        for ($i = 1; $i < 8; $i++){
-    echo "<div class='square black'>\n<div class='square'>";
+           echo "<div class='square black'>\n<div class='square'>\n";
+}       for ($i = 1; $i < 8; $i++){
+           echo "</div>\n";
 }
 
 ?>
