@@ -2,6 +2,7 @@ html {
     margin: auto;
     width: 100%;
     background-color: black;
+    background-image: url('../images/animated-gear-equal.gif');
 }
 body {
     width: 50%;
@@ -15,43 +16,6 @@ body {
 }
 #functionMachineDiv {
     display: inline-block;
-}
-.container{
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  margin: 1em;
-}
-
-.container1{
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  top: 10%;
-  left: 77%;
-  margin: 0;
-}
-
-.square{
-  height: 94%;
-  width: 94%;
-  background: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -47% 0 0 -47%;
-}
-
-.black{ 
-  background: black;  
-  animation: rotate 10s infinite linear; 
-}
-
-@keyframes rotate{
-  0%{ transform: rotate(0deg); }
-    100%{ transform: rotate(360deg); }  
 }
 .warning {
     font-family: 'Righteous', cursive;
