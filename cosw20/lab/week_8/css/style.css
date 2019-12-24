@@ -1,0 +1,32 @@
+body {
+  background-color: skyblue;
+  margin-top: 50px;
+}
+div {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
+@keyframes bodyanimate {
+   0% { fill: #ffffff;}
+   50% { fill: #ff59a1;}
+   100% { fill: #ffffff;}
+}   
+        
+ #monsterbody {
+  animation: bodyanimate 15s infinite;
+ }
+    
+@keyframes changeEyeColor {
+ 0%, 100% { fill: green;}
+ 33% { fill: yellow;}
+ 66% { fill: red;}  
+}
+
+#eyecolor {
+  animation: changeEyeColor 30s infinite;
+ }
+
+svg #eyeball:hover {
+  fill: white;
+}

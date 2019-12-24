@@ -1,0 +1,91 @@
+html {
+    background-color: navy;
+    padding: 1.2em 0;
+}
+body {
+    margin: 0.2% 0 0 5%;
+    font-family: 'Marvel', sans-serif;
+    width: 90%;
+    background-color: antiquewhite;
+    width: 90%;
+}
+p {
+    
+}
+p, li, dt {
+    font-size: 177%;
+    text-indent: 0.25em;
+}
+/* ######################################
+####    the header styles    ############
+###################################### */
+header {
+    border-bottom: 0.125em solid navy;
+    height: 10em;
+    background-color: azure;
+}
+img.headerLeft {
+    width: 9.375em;
+    float: left;
+    margin: 1.10em; 0.8em;
+    
+}
+img.headerRight {
+    width: 14.125em;
+    float: right;
+    margin: 0 0.8em;
+    
+}
+h1.header , h2.header, h3.header {
+    text-align: center;
+}
+/* #########################################################
+############# triple colums: section, article and aside %%%%
+######################################################### */
+section.bio {
+    clear: both;
+    width: 33%;
+    float: left;
+    margin: 0 .5em .2em 0.8em;
+}
+img.bio {
+    float: left;
+    margin-right: 0.25em;
+}
+article.contributions {
+    width: 33%;
+    float: left;
+    margin: 0.2em 0.8em ;
+}
+img.contributions {
+    float: left;
+    margin-right: 0.25em;
+}
+aside.reference {
+    width: 30%;
+    float: right;
+}
+.reference dl {
+ text-indent: 0.5%; 
+    font-size: 177%;
+}
+.reference dd {
+    text-indent: 5%;
+}
+/* #########################################
+## lets wrapup with the footer (copyleft) ##
+###########################################*/
+footer {
+    padding: 2% 0.8em;
+    clear: both;
+    background-color: azure;
+    border-top: 0.125em solid navy;
+}
+.copyleft img {
+    float: left;
+    width: 1.6 em;
+}
+p.copyleft {
+    text-align: right;
+    font-size: 0.8em;
+}
