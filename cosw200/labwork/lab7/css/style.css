@@ -1,0 +1,25 @@
+body {
+  font-family: Verdana, sans-serif;
+}
+header {
+  text-align: center;
+  background-color: silver;
+  padding: 20px;
+}
+main {
+  margin: 0 10%;
+}
+.purple {
+  color: purple;
+}
+.green {
+  color: green;
+}
+.need {
+  background-color: orange;
+  width: 200px;
+  padding: 5px;
+}
+.musthave {
+  background-color: red;
+}
