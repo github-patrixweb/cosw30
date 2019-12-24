@@ -1,0 +1,67 @@
+html {
+     margin: 0;
+}
+body {
+    background-color: #000000;
+    width: 20em;
+    margin: 0 auto;
+}
+.headerImage {
+    width: auto;
+    max-width: 100%;
+    
+}
+#headImages {
+  width: 200px;
+  margin: 0 auto;
+}
+.promo div {
+    }
+#form {
+  /* form div wrapper */
+  width: 18em;
+  margin: 0 auto;
+}
+/* real form */
+#userInput {
+    width: 98%;
+    margin: 0 auto;
+    border: 0.25em solid black;
+}
+
+#mainContent {
+    visibility: hidden;
+    background-color: #FFFFFF;
+    width: 98%;
+    margin: 0 auto;
+    padding: 0.25em 0.5em;
+}
+#promo {
+    display: flex;
+    width: 98%;
+    margin: 0 auto;
+    background-color: aqua;
+    color: red;
+}
+/* align close X right */
+#close {
+    float: right;
+    text-align: right;
+    width: inherit;
+    color: red;
+}
+#unFeedback, #pwFeedback1, #pwFeedback2, #upgrades {
+    color: red;
+}
+@media only screen and (max-width = 600px){
+#userInput {
+    width: 40%;
+    }
+#mainContent {
+    width: 40%;
+    }
+#promo {
+    width: 40%;
+    }
+    
+}

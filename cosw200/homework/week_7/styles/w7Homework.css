@@ -1,0 +1,110 @@
+body {
+    background-color: antiquewhite;
+    margin: .2em .5em;
+    padding: 0;
+}
+/* this style is for the unique h1 */
+#PrimeHeader {
+    width: 98%;
+    margin: 0.2em auto;
+    text-align: center;
+    font-size: 262%;
+}
+/* the image in the header */
+#headImage {
+    width = 50%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+/* the paragraph for highlight qualities */
+#threeRandomP {
+    width: 50%;
+    margin: 0.2em auto;
+    text-align: center;
+    font-size: 162%;
+}
+
+/* these styles for headings above list of qualities */
+.programmerQualities {
+    text-align: center;
+    width: 50%;
+    border: solid navy 0.12em;
+    color: white;
+    margin: 0.02em auto;
+    background-color: blue;
+}
+
+ul {
+    margin: 0.02em auto;
+    width: 48%;
+}
+/* these are the li in the quality list */
+.quality {
+    background-color: green;
+    color: white;
+    list-style-type: none;
+    display: block;
+    width: auto;
+    padding: 0.2em 0.4em;
+    font-size: 1.2em;
+    text-align: center;
+}
+/* highlight three random items */
+.cool {
+    background-color: yellow;
+    color: navy;
+    list-style-type: none;
+    display: block;
+    width: auto;
+    padding: 0.2em 0.4em;
+    font-size: 1.2em;
+    text-align: center;
+
+}
+/* the buttons below quality list...*/
+.button {
+    width: auto;
+    display: block;
+    margin: 0.8em auto;
+}
+/* this style is/4 add confirmation p */
+#addedConformation {
+    width: 50%;
+    margin: 0.2em auto;
+    text-align: center;
+    font-size: 0.75em;
+}
+/* confirm removal style */
+#removedConformation {
+    width: 50%;
+    margin: 0.2em auto;
+    text-align: center;
+    font-size: 0.75em;
+}
+/* float the images in footer */
+#leftFoot {
+    width: auto;
+    max-width: 100%;
+    float: left;
+}
+#rightFoot {
+    width: auto;
+    max-width: 100%;
+    float: right;
+}
+/* lets wrap up the footer */
+footer {
+    clear: both;
+    width: 50%;
+    margin: 0.2em auto;
+    font-size: 0.5em;
+    font-style: italic;
+    text-align: center;
+    height: 144px;
+    vertical-align: bottom;
+}
+#footDate {
+    vertical-align: bottom;
+    height: inherit;
+}

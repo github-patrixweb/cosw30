@@ -1,0 +1,19 @@
+body {
+    margin: 0.2% 3%;
+}
+#strings {
+    width: 45%;
+    float: left;
+}
+#arrays {
+    width: 45%;
+    float: right;
+}
+h1 {
+    font-size: 162%;
+    color: navy;
+    text-align: center;
+}
+li {
+    padding: 0.25em 0;
+}
