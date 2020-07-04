@@ -1,10 +1,6 @@
-<!doctype html>
-  <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>default</title>
-          </head>
-   <body>
-       
-      </body>
-  </html>
+<?php 
+$headTitle = "Patrick Ole's Web Development Portfolio";
+$title = "Home";
+include "includes/po_portfolio_header.html";
+include "includes/po_home.html";
+include "includes/po_portfolio_footer.html"; ?>
