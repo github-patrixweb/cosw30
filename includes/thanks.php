@@ -1,7 +1,7 @@
 <?php 
 $headTitle = "Thanks for your message";
 $title = "Thanks for your message";
-include "includes/po_portfolio_header.html"; ?>   
+include "po_portfolio_header.html"; ?>   
     <div class="container">  
       <h2>Thanks for your message.  I'll reply ASAP.</h2>
     </div>
@@ -16,4 +16,4 @@ include "includes/po_portfolio_header.html"; ?>
         })();
     </script>
 
- <?php include "includes/po_portfolio_footer.html"; ?>
+ <?php include "po_portfolio_footer.html"; ?>
