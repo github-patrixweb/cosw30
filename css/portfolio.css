@@ -1,0 +1,369 @@
+html {
+    background-color: #0A3C60;
+    background-image: url('../images/www20.jpg');
+}
+body {
+    width: 90%;
+    background-color: aliceblue;
+    margin: auto;
+    padding: 0.5em 0;
+    font-family: 'Montserrat', sans-serif;
+}
+h1, h2 {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.2em 0.1em;
+}
+h3, h4 {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.5em 0em;
+    
+}
+#tooltip { 
+    position: relative; 
+}
+#tooltip a acronym {
+    display: none; 
+    color: #FFFFFF; 
+}
+#tooltip a:hover acronym { 
+    display: block; 
+    position: absolute; 
+    width: 162px; 
+    background: #aaa url(images/horses200x50.jpg); 
+    height: 162px; 
+    left: -62px; 
+    top: 62px; 
+    color: #FFFFFF; 
+    padding: 0 5px; 
+}
+#mainHead {
+    text-align: center;
+}
+.mainSubHead {
+    text-align: right;
+    padding-right: 0.5em;
+    color: #fff;
+}
+#headImg {
+    display: block;
+    margin: auto;
+}
+img {
+    min-width: 17%;
+    max-width: 100%;
+}
+.headLeft {
+    width: 40%;
+    float: left
+}
+.headCenter {
+    width: 20%;
+    float: left;
+    display: block;
+    margin: auto;
+}
+.headRight {
+    width: 40%;
+    float: right;
+}
+.topnav {
+    background-color: #0A3C60;
+    overflow: hidden;
+    clear: both;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.8em 1em;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.topnav a:hover {
+    background-color: greenyellow; 
+    color: black;
+}
+.active {
+    background-color: blue;
+    color: white;
+}
+.topnav .icon {
+    display: none;
+}
+.container {
+    padding: 0.2em 0.5em;
+}
+li {
+    padding: 0.251em 0;
+    font-family: 'Montserrat', sans-serif;
+}
+p {
+    text-indent: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+section {
+    padding: 1.5em 2.25em;
+}
+.col-1, .col-2, .col-3 {
+    width: 28%;
+    float: left;
+    padding: 0.25em 1em;
+}
+main a {
+    color: blue;
+}
+main a:visited {
+    color: green;
+}
+main a:hover {
+    color: pink;
+}
+details {
+    display:block; 
+    width:900px;
+    margin:10px 0;
+}
+summary {
+    display: block; 
+    background: #0A3C60;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+summary::-webkit-details-marker {
+   color:#FF0000; 
+   background:#FFFFFF; 
+}
+
+details[open] summary::-webkit-details-marker {
+   color:#0000FF; 
+   background:#00FFFF;
+}
+summary::-webkit-details-marker {
+   display: none
+}
+
+summary:after {
+   content: "+";
+   color: #FFFFFF;
+   float: left;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin: -5px 5px 0 0;
+   padding: 0;
+   text-align: center;
+   width: 20px;
+}
+
+details[open] summary:after {
+   content: "-";
+  color: #FFFFFF
+}
+
+.center {
+    width: auto;
+    margin: auto;
+    display: block;
+}
+.i {
+    font-style: italic; 
+}
+label {
+    text-align: right;
+    width: 7em;
+    margin: 0.25em 0.5em;
+    clear: both;
+    float: left;
+}
+input[type=text], [type=tel], [type=submit], textarea {
+    padding: 0.5em;
+    margin: 0.25em 0.5em;
+}
+textarea {
+        width: 75%
+}
+.grid-container {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto auto auto;
+}
+/*.grid-col1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}*/
+
+.resumeHeader {
+    color: white;
+    font-size: 20px;
+    text-indent: 25px;
+}
+.resume {
+    text-indent: 25px;
+}
+@keyframes POresume {
+  0%   {background-color:#0A3C60; left:25px; top:0px;}
+  25%  {background-color:#f00; left:300px; top:0px;}
+  50%  {background-color:white; left:300px; top:300px;}
+  75%  {background-color:blue; left:25px; top:300px;}
+  100% {background-color:#0A3C60; left:25px; top:0px;}
+}
+.resumeHeadDiv {
+  width: 300px;
+  height: 36px;
+  position: relative;
+  background-color: #0A3C60;
+  animation-name: POresume;
+  animation-duration: 4s;
+}
+
+footer {
+    clear: both;
+    background-color: #0A3C60;
+    color: white;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    color: greenyellow;
+}
+#footNav {
+    padding: 0.5em;
+}
+#footNav li {
+    display: inline;
+    padding: 1em;
+}
+#copyright {
+    width: 44%;
+    float: right;
+}
+#copyright p {
+    text-align: right;
+    padding: 0.5em;
+}
+.popTop {
+    clear: both;
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+@media only screen and (max-width: 1200px) {
+body {
+    background-color: lightgreen;
+    width: 95%;
+}   
+.col-1, .col-2, .col-3 {
+    width: 31%;
+    }
+ }
+/* media query for mobile */
+@media only screen and (max-width: 700px) {
+body, nav, ul, li, a  {
+    margin: 0; padding: 0;
+}
+body {
+    background-color: lightblue;
+    width: 98%;
+}
+.col-1, .col-2, .col-3 {
+    width: 100%;
+    }
+#footNav li {
+    display: block;
+    padding: 1em;
+}
+.topnav a:not(:first-child) {
+    display: none;
+}
+.topnav a.icon {
+    clear: both;  
+    float: right;
+}
+
+a {
+    text-decoration: none;
+}
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 10px auto;
+}
+.toggleMenu {
+    display:  none;
+    background: #666;
+    padding: 10px 15px;
+    color: #fff;
+}
+.nav {
+    list-style: none;
+     *zoom: 1;
+     background:#175e4c;
+     position: relative;
+}
+.nav:before,
+.nav:after {
+    content: " "; 
+    display: table; 
+    clear: both;
+}
+.nav ul {
+    list-style: none;
+    width: 9em;
+}
+.nav a {
+    padding: 10px 15px;
+    color:#fff;
+    *zoom: 1;
+}
+.nav > li {
+    float: left;
+    border-top: 1px solid #104336;
+    z-index: 200;
+}
+.nav > li > a {
+    display: block;
+}
+.nav li ul {
+    position: absolute;
+    left: -9999px;
+    z-index: 100;
+}
+.nav li li a {
+    display: block;
+    background: #1d7a62;
+    position: relative;
+    z-index:100;
+    border-top: 1px solid #175e4c;
+}
+.nav li li li a {
+    background:#249578;
+    z-index:200;
+    border-top: 1px solid #1d7a62;
+}
+}
+@media screen and (max-width: 600px) {
+.topnav.responsive {
+    position: relative;
+}
+.topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+}
+}
+
+
+
